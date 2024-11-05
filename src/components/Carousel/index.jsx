@@ -14,7 +14,7 @@ function ControlledCarousel() {
     <div style={{marginTop:'76px'}}>
       <Carousel activeIndex={index} onSelect={handleSelect}>
         <Carousel.Item>
-          <Image src="/bannerADS.png" width={600} height={400} layout='responsive' />
+          <Image src="/bannerADS.png" width={600} height={400} layout='responsive' alt='banner'/>
           <Carousel.Caption>
             <h3>First slide label</h3>
             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
