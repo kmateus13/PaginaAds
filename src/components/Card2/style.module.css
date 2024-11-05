@@ -1,0 +1,7 @@
+.card {
+    width: 18rem;
+    height: 24rem;
+    position: relative;
+    cursor: pointer;
+    margin-left: 18px;
+}

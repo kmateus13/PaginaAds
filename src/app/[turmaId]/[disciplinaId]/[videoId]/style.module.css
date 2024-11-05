@@ -1,0 +1,20 @@
+.container {}
+
+.containerVideo {
+    
+}
+
+.containerOutros {
+    background-color: #F8F9FA;
+    flex: 1;
+    padding: 30px 30px;
+    color: #000;
+}
+
+.containerOutros ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+
+}

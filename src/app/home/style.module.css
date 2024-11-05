@@ -1,0 +1,9 @@
+.sessaoProfessores{
+    background-color: #F2F2F2;
+}
+
+.slickPrev::before{
+content: "" !important;
+}
+
+
