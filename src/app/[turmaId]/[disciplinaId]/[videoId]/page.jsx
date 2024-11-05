@@ -47,7 +47,7 @@ export default function Video({ params }) {
 
     return (
         <>
-            {verificarPage === false ? (<div className="content">ERROR</div>) :
+            {verificarPage &&
                 (<main>
                     <div className="container">
                         <h1 className="mt-3 py-5">Aula dia 01-12-2024</h1>
@@ -62,7 +62,7 @@ export default function Video({ params }) {
                                         allowFullScreen
                                     ></iframe>
                                 ) : (
-                                    <div style={{ width: "950px", height: "600px" }}>Sem Vídeo</div>
+                                    <div style={{ width: "950px", height: "600px" }}></div>
                                 )}
                             </div>
                             <div className={style.containerOutros}>

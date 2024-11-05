@@ -1,13 +1,13 @@
 "use client"
-import { IoChatboxEllipsesOutline } from "react-icons/io5";
+
 import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet';
+
 
 const DifyChatbot = () => {
   useEffect(() => {
     // O código do chatbot será inserido aqui.
     window.difyChatbotConfig = {
-      token: 'oDAfKODT5J3a6yUO',
+      token: 'hY6rVwlhWijbSsjG',
       draggable: false,
       baseUrl: 'http://144.33.18.79:8081'
     };
