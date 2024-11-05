@@ -1,6 +1,4 @@
 "use client";
-import Footer from "@/components/Footer";
-import OffcanvasExample from "@/components/Navbar";
 import style from "./style.module.css";
 import { getVideos } from "@/utils/verificadorKey";
 import { turmas } from "@/app/api/turmas";
@@ -48,15 +46,14 @@ export default function Video({ params }) {
     }, [videoId]);
 
     return (
-        <div className="pageContainer">
-            <OffcanvasExample />
+        <>
             {verificarPage === false ? (<div className="content">ERROR</div>) :
-                (<main className="content">
+                (<main>
                     <div className="container">
                         <h1 className="mt-3 py-5">Aula dia 01-12-2024</h1>
                         <div className="mb-5 d-flex gap-2">
                             <div className={style.containerVideo}>
-                            {videoAtual ? (
+                                {videoAtual ? (
                                     <iframe
                                         src={`https://drive.google.com/file/d/${videoAtual}/preview`}
                                         width="950"
@@ -65,7 +62,7 @@ export default function Video({ params }) {
                                         allowFullScreen
                                     ></iframe>
                                 ) : (
-                                    <div style={{width:"950px", height:"600px"}}>Sem Vídeo</div>
+                                    <div style={{ width: "950px", height: "600px" }}>Sem Vídeo</div>
                                 )}
                             </div>
                             <div className={style.containerOutros}>
@@ -84,7 +81,7 @@ export default function Video({ params }) {
                     </div>
                 </main>
                 )}
-            <Footer />
-        </div>
+
+        </>
     );
 }

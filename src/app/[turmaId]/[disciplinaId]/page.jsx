@@ -1,6 +1,4 @@
 import { turmas } from "@/app/api/turmas";
-import Footer from "@/components/Footer";
-import OffcanvasExample from "@/components/Navbar";
 import { listarSubpastas } from "@/utils/apiGoogleDrive";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -24,7 +22,7 @@ export default async function Disciplina({ params }) {
         notFound();
     }
 
-    const folderId = disciplina.keyPasta ; // Insira o ID da pasta pública aqui
+    const folderId = disciplina.keyPasta; // Insira o ID da pasta pública aqui
     let subpastas = [];
     let error = null;
 
@@ -41,9 +39,7 @@ export default async function Disciplina({ params }) {
 
 
     return (
-        <div className="pageContainer">
-            <OffcanvasExample />
-            <main className="content">
+            <main>
                 <div className="container mt-3 py-5">
                     <h1>{disciplina.titulo}</h1>
                     <h2>Professor: {disciplina.professor}</h2>
@@ -59,7 +55,5 @@ export default async function Disciplina({ params }) {
                     </div>
                 </div>
             </main>
-            <Footer />
-        </div>
     );
 }

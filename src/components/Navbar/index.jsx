@@ -14,7 +14,7 @@ function OffcanvasExample() {
     <>
       <Navbar fixed="top" key='md' expand='md' className="bg-body-tertiary ">
         <Container>
-          <Navbar.Brand href="/home" className={style.logo}>
+          <Navbar.Brand href="/" className={style.logo}>
             <Image src="/logoUnifacisa.png" width={0} height={0} layout='responsive' className={style.logoImg}  alt="Logo Unifacisa"/>
             <div className="vr mx-2"></div>
             <Image src="/logoADS.svg" width={0} height={0} layout='responsive'  className={style.logoImg} alt="Logo ADS"/>
