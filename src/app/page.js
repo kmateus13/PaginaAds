@@ -1,14 +1,15 @@
 "use client"
-import style from "./style.module.css"
-import LayoutCard2 from "@/components/Card2";
-import CardProfessor from "@/components/CardProfessores";
-import ControlledCarousel from "@/components/Carousel";
+import style from "./style.module.css";
+import LayoutCard2 from "../components/Card2";
+import CardProfessor from "../components/CardProfessores";
+import ControlledCarousel from "../components/Carousel";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 import Link from "next/link";
 import { turmas } from "./api/turmas";
+
 
 
 
