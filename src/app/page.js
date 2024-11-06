@@ -9,6 +9,7 @@ import Slider from "react-slick";
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 import Link from "next/link";
 import { turmas } from "./api/turmas";
+import Image from "next/image";
 
 
 
@@ -41,12 +42,32 @@ export default function home() {
 
     const settings = {
         dots: true,
-        infinite: true,
+        infinite: false,
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 1,
         nextArrow: <FaArrowAltCircleRight color="#000" />,
-        prevArrow: <FaArrowAltCircleLeft color="#000" />
+        prevArrow: <FaArrowAltCircleLeft color="#000" />,
+        responsive: [
+            {
+              breakpoint: 1400,
+              settings: {
+                slidesToShow: 3,
+              },
+            },
+            {
+              breakpoint: 992, 
+              settings: {
+                slidesToShow: 2, 
+              },
+            },
+            {
+              breakpoint: 768, 
+              settings: {
+                slidesToShow: 1,
+              },
+            },
+          ],
     };
 
 
@@ -57,19 +78,18 @@ export default function home() {
             <section>
                 <div className="container mt-3 py-5">
                     <h1>TURMAS</h1>
-                    <div>
-                        <Slider {...settings} >
-                            {turmas.map((turma) => (
-                                <Link key={turma.id} href={`/${turma.id}`}>
-                                    <LayoutCard2
-                                        key={turma.id}
-                                        turma={turma.turma}
-                                    />
-                                </Link>
 
-                            ))}
-                        </Slider>
-                    </div>
+                    <Slider {...settings}  >
+                        {turmas.map((turma) => (
+                            <Link key={turma.id} href={`/${turma.id}`} >
+                                <Image key={turma.id} src={turma.turma} width={288} height={388}   alt='Banner Turma' />
+                            </Link>
+
+
+
+                        ))}
+                    </Slider>
+
 
                 </div>
             </section>

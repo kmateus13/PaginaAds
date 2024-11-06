@@ -1,7 +1,7 @@
 .card {
-    width: 18rem;
-    height: 24rem;
+    width: 288px !important;
+    height: 384px;
     position: relative;
     cursor: pointer;
-    margin-left: 18px;
+
 }
